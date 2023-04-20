@@ -1,0 +1,1 @@
+python bert_mlm.py --num_epochs 500 --batch_dim 246 --transformer_depth 3 --transformer_heads 8 --d_ff_dim 2048 --d_model 512 --dropout_rate 0.1 --dense_atv_fun gelu --optimizer_fn radam 1e-03 0.9 0.999 1e-08 1e-04 --dim_k 0 --parameter_sharing ''
