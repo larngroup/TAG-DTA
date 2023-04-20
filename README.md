@@ -45,9 +45,8 @@
 - periodictable
 - subword_nmt
 
-## Usage
+## Usage (Need to unpack data files first)
 (The architecture supports the use of the Linear Multi-Head Attention arXiv:2006.04768)
-(Need to unpack data files first)
 ## BR-DTATR (Dir:'./BR-DTATR/source/')
 ### Training
 ```
