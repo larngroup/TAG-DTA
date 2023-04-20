@@ -5,7 +5,7 @@
 ## BR-DTATR Architecture
 <p align="center"><img src="/figures/br_dtatr.png" width="90%" height="90%"/></p>
 
-## DTI/Model Explainability
+## DTI and Model Explainability
 ### ABL1(E255K)-phosphorylated - SKI-606
 <p align="center"><img src="/figures/docking_br_dtatr_v1_a.png" width="90%" height="90%"/></p>
 <p align="center"><img src="/figures/docking_br_dtatr_v1_b.png" width="90%" height="90%"/></p>
