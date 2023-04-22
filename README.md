@@ -3,6 +3,8 @@
 
 
 ## BR-DTATR Architecture
+- Training Scheme: : (I) pre-training of the 1D binding pocket classifier; (II) training of the binding affinity regressor; and (III) training of the 1D binding pocket classifier. 
+- Training Cycle: training of the binding affinity regressor + training of the 1D binding pocket classifier
 <p align="center"><img src="/figures/br_dtatr.png" width="90%" height="90%"/></p>
 
 ## DTI and Model Explainability
