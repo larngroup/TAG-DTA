@@ -25,7 +25,7 @@ def build_bert_binding_affinity(FLAGS, prot_emb_size, bert_smiles_train,
                                 affinity_enc_atv_fun, affinity_fc_depth, affinity_fc_units,
                                 affinity_fc_atv_fun):
     """
-    Function to build the BR-DTATR Model
+    Function to build the TAG-DTA Model
 
     Args:
     - FLAGS: arguments object
@@ -55,7 +55,7 @@ def build_bert_binding_affinity(FLAGS, prot_emb_size, bert_smiles_train,
     - affinity_fc_atv_fun: Binding Affinity FCNN activation function
 
     Outputs:
-    - BR-DTATR Model
+    - TAG-DTA Model
     """
 
     prot_atv_fun = af_config(prot_atv_fun)
@@ -144,7 +144,7 @@ def build_bert_binding_affinity(FLAGS, prot_emb_size, bert_smiles_train,
 
 def grid_search(FLAGS, data_bind_vector, data_bind_aff, model_function):
     """
-    BR-DTATR Grid Search function
+    TAG-DTA Grid Search function
 
     Args:
     - FLAGS: arguments object
@@ -392,7 +392,7 @@ def grid_search(FLAGS, data_bind_vector, data_bind_aff, model_function):
 
 def run_grid_search(FLAGS):
     """
-    Run BR-DTATR Grid Search function
+    Run TAG-DTA Grid Search function
     Args:
     - FLAGS: arguments object
     """

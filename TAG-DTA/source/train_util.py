@@ -141,7 +141,7 @@ def run_train_val(FLAGS, fold_idx, epochs, bind_data_train, bind_data_val, affin
     - bind_data_val [TF Dataset]: [binding_val_protein_data, binding_val_smiles_data, binding_val_target, binding_val_weights]
     - affinity_data_train [TF Dataset]: [affinity_train_protein_data, affinity_train_smiles_data, affinity_train_target]
     - affinity_data_val [TF Dataset]: [affinity_val_protein_data, affinity_val_smiles_data, affinity_val_target]
-    - model [TF Model]: BR-DTATR Model Architecture
+    - model [TF Model]: TAG-DTA Model Architecture
     - smiles_opt [TF Optimizer]: Pre-Trained SMILES Transformer-Encoder optimizer function
     - bind_opt [TF Optimizer]: 1D Binding Pocket Classifier optimizer function
     - affinity_opt [TF Optimizer]: Binding Affinity Regressor optimizer function

@@ -53,12 +53,12 @@ def inference_metrics(real,preds):
         stats.spearmanr(real, preds)[0]
 
 
-# Load Saved BR-DTATR Model
+# Load Saved TAG-DTA Model
 def load_saved_model(model,
                      smiles_opt = ['radam', '1e-05', '0.9', '0.999', '1e-08', '1e-05', '0', '0', '0'] ,
                      bind_opt = ['radam', '1e-04', '0.9', '0.999', '1e-08', '1e-05', '0', '0', '0'],
                      aff_opt = ['radam', '1e-04', '0.9', '0.999', '1e-08', '1e-05', '0', '0', '0'],
-                     init_bias = [-1.663877], ckpt_path='../checkpoint/br_dtatr_checkpoint/'):
+                     init_bias = [-1.663877], ckpt_path='../checkpoint/tag_dta_checkpoint/'):
 
     smiles_opt = opt_config(smiles_opt)
     bind_opt = opt_config(bind_opt)
