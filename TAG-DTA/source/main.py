@@ -286,8 +286,8 @@ def grid_search(FLAGS, data_bind_vector, data_bind_aff, model_function):
             # Binding Vector Prediction - Hold-out Validation
             with tf.device('/cpu:0'):
                 bind_data_train, bind_data_val = data_bind_vector
-                bind_data_train = bind_data_train.batch(p19).take(2)
-                bind_data_val = bind_data_val.batch(p19).take(2)
+                bind_data_train = bind_data_train.batch(p19)
+                bind_data_val = bind_data_val.batch(p19)
 
             # Binding Pocket Loss Function
             if p27[0] == 'focal':
@@ -325,10 +325,10 @@ def grid_search(FLAGS, data_bind_vector, data_bind_aff, model_function):
 
                 affinity_data_train = tf.data.Dataset.from_tensor_slices(tuple(affinity_data_train))
                 # data_train = data_train.shuffle(buffer_size=len(data_train), reshuffle_each_iteration=False)
-                affinity_data_train = affinity_data_train.batch(p19).take(2)
+                affinity_data_train = affinity_data_train.batch(p19)
 
                 affinity_data_val = tf.data.Dataset.from_tensor_slices(tuple(affinity_data_val))
-                affinity_data_val = affinity_data_val.batch(p19).take(2)
+                affinity_data_val = affinity_data_val.batch(p19)
 
             # Binding Affinity Loss Function, Training and Validation Objects
             affinity_loss_fn = tf.keras.losses.MeanSquaredError()
@@ -472,10 +472,10 @@ def run_train_model(FLAGS):
 
         affinity_data_train = tf.data.Dataset.from_tensor_slices(tuple(affinity_data_train))
         # data_train = data_train.shuffle(buffer_size=len(data_train), reshuffle_each_iteration=False)
-        affinity_data_train = affinity_data_train.batch(FLAGS.batch_size[0]).take(2)
+        affinity_data_train = affinity_data_train.batch(FLAGS.batch_size[0])
 
         affinity_data_val = tf.data.Dataset.from_tensor_slices(tuple(affinity_data_val))
-        affinity_data_val = affinity_data_val.batch(FLAGS.batch_size[0]).take(2)
+        affinity_data_val = affinity_data_val.batch(FLAGS.batch_size[0])
 
 
         # Binding Pocket Dataset
@@ -485,8 +485,8 @@ def run_train_model(FLAGS):
                                 '../data/bind_data/coach_test/target.tfrecords',
                                 '../data/bind_data/coach_test/weights.tfrecords')
 
-        bind_data_train = bind_data_train.batch(FLAGS.batch_size[0]).take(2)
-        bind_data_val = bind_data_val.batch(FLAGS.batch_size[0]).take(2)
+        bind_data_train = bind_data_train.batch(FLAGS.batch_size[0])
+        bind_data_val = bind_data_val.batch(FLAGS.batch_size[0])
 
     FLAGS.log_dir = os.getcwd() + '/logs/' + time.strftime("%d_%m_%y_%H_%M", time.gmtime()) + "/"
     FLAGS.checkpoint_dir = os.getcwd() + '/checkpoints/' + time.strftime("%d_%m_%y_%H_%M", time.gmtime()) + "/"
